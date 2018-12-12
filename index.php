@@ -37,13 +37,13 @@
 				document.getElementById('comment_logs').innerHTML = xmlhttp.responseText; //the chatlogs from the db will be displayed inside the div section
 			}
 		}
-		xmlhttp.open('GET', 'insert03.php?name='+name+'&comments='+comments, true); //open and send http request
+		xmlhttp.open('GET', 'insert.php?name='+name+'&comments='+comments, true); //open and send http request
 		xmlhttp.send();
 	}
 	
 		$(document).ready(function(e) {
 			$.ajaxSetup({cache:false});
-			setInterval(function() {$('#comment_logs').load('logs03.php');}, 2000);
+			setInterval(function() {$('#comment_logs').load('logs.php');}, 2000);
 		});
 		
 </script>
